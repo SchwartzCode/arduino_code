@@ -1,7 +1,6 @@
-//initialize pin numbers for input and output
 int kill_switch = 13; 
-int temp_pin1 = 2;
-int temp_pin2 = 3;
+int temp_pin1 = 4;
+int temp_pin2 = 5;
 
 double temp1=0, temp2=0; //initialize temp readings to 0
 bool stop = false; //initialize boolean that activates kill switch
@@ -54,10 +53,11 @@ void loop()
 {
   //read and handle temperature sensor readings
   temp1=temp_read(temp_pin1);
-  delay(10); //not certain delay are necessary
+  delay(10); //delays at least help prevent arduino overheating, may help sensors ass well
   temp2=temp_read(temp_pin2);
   delay(10);
-  
+
+
   //prints temperature readings to serial port for debugging
   Serial.print("TEMP_1: ");
   Serial.println(temp1);
