@@ -108,13 +108,4 @@ void loop() {
   
   delay(100);
 
-/*
-  for (int i=0; i<2; i++) {
-    for (int j=0; j<2; j++) {
-      digitalWrite(led_pins[i][j], HIGH);
-      delay(200);
-      digitalWrite(led_pins[i][j], LOW);
-    }
-  }
-  */
 }
